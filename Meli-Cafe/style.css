@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Background with honeycombs on edges */
+body {
+    font-family: "Arial", sans-serif;
+    background: url(images/) repeat;
+    background-size: 120px;
+    color: #333;
+    padding-top: 80px;
+}
+/* Content container (center area with opaque yellow background) */
+.page-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px;
+  background: rgba(255, 223, 88, 0.85); /* soft opaque honey-yellow */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background: #fff8dc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #5a3c0a;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #1f2ac4;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #fff8dc;
+  margin-top: 40px;
+}
+footer a {
+  color: #5a3c0a;
+  font-weight: bold;
+}
+
+/* --- About Page alternating sections --- */
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 0;
+}
+
+.about-section img {
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+.about-text {
+  flex: 1;
+  background: rgba(255,255,255,0.8);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.about-text h2 {
+  margin-bottom: 15px;
+  color: #5a3c0a;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+/* --- Menu Page --- */
+.menu h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  color: #5a3c0a;
+}
+
+.menu-section {
+  margin-bottom: 50px;
+}
+
+.menu-section h2 {
+  font-size: 2rem;
+  color: #c47f1f;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #c47f1f;
+  padding-bottom: 5px;
+}
+
+.menu-category {
+  margin: 20px 0;
+}
+
+.menu-category h3 {
+  font-size: 1.4rem;
+  color: #5a3c0a;
+  margin-bottom: 10px;
+}
+
+.menu-category ul {
+  list-style: none;
+  padding-left: 15px;
+}
+
+.menu-category ul li {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+/* Flavors & Toppings section */
+.extras {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  padding: 20px;
+  border-top: 2px dashed #c47f1f;
+  gap: 20px;
+}
+
+.extras-box {
+  flex: 1;
+  background: rgba(255,255,255,0.85);
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.extras-box h3 {
+  color: #5a3c0a;
+  margin-bottom: 10px;
+}
+
+.extras-box ul {
+  list-style: none;
+  padding-left: 10px;
+}
+
+.extras-box ul li {
+  margin-bottom: 6px;
+  font-size: 1rem;
+}
+
+/* --- Responsive Layout --- */
+@media (max-width: 768px) {
+  /* Stack about sections */
+  .about-section,
+  .about-section.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-section img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* Stack flavors/toppings */
+  .extras {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .extras-box {
+    width: 100%;
+    max-width: 400px;
+  }
+}
