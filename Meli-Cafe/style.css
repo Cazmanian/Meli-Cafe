@@ -46,6 +46,8 @@ body {
   top: 0;
   width: 100%;
   height: 70px;
+  font-size: 20px;
+  gap: 23px;
   background: #fff8dc;
   display: flex;
   align-items: center;
@@ -140,16 +142,24 @@ footer a {
 }
 
 /* --- Menu Page --- */
-.menu h1 {
+.menu_title {
   text-align: center;
   margin-bottom: 30px;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   color: #5a3c0a;
   font-family: 'Mrs Saint Delafield', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, cursive;
 }
 
 .menu-section {
-  margin-bottom: 50px;
+  flex: 1;
+  min-width: 300px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
 .menu-section h2 {
@@ -163,7 +173,7 @@ footer a {
 
 .menu-category {
   margin: 20px 0;
-  font-family: "Mrs Saint Delafield", 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Montserrat" Arial, sans-serif;
   letter-spacing: 1px;
 }
 
@@ -217,21 +227,18 @@ footer a {
   font-size: 1rem;
 }
 
-/* --- Responsive Layout --- */
+
 @media (max-width: 768px) {
-  /* Stack about sections */
-  .about-section,
-  .about-section.reverse {
+  .menu-columns {
     flex-direction: column;
-    text-align: center;
+    align-items: center;
   }
 
   .about-section img {
     width: 100%;
     max-width: 300px;
   }
-
-  /* Stack flavors/toppings */
+    /* Stack flavors/toppings */
   .extras {
     flex-direction: column;
     align-items: center;
