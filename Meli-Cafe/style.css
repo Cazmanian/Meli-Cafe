@@ -12,8 +12,8 @@
 /* Background with honeycombs on edges */
 body {
     font-family: "Montserrat", "Arial", sans-serif;
-    background: url(images/honeycomb.jpeg);
-    background-size: 120px;
+    background: url(images/honeycomb.jpg);
+    background-size: 1000px;
     color: #333;
     padding-top: 80px;
 }
@@ -22,7 +22,7 @@ body {
   max-width: 1000px;
   margin: 0 auto;
   padding: 30px;
-  background: rgba(238, 212, 98, 0.85); /* soft opaque honey-yellow */
+  background: rgba(238, 212, 98, 0.95); /* soft opaque honey-yellow */
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
@@ -165,7 +165,7 @@ footer a {
 .menu-section h2 {
   font-size: 2rem;
   font-family: 'Montserrat', Cambria, sans-serif;
-  color: #c47f1f;
+  color: #054edb;
   margin-bottom: 15px;
   border-bottom: 2px solid #c47f1f;
   padding-bottom: 5px;
