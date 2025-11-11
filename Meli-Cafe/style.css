@@ -28,8 +28,7 @@ body {
 }
 .front-logo {
   text-align: center;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top: -60px;
 }
 .front-logo img {
   width: 500px;
@@ -126,10 +125,12 @@ footer a {
 }
 
 .about-text {
+  font-weight: 550;
   flex: 1;
   background: rgba(255,255,255,0.8);
   padding: 20px;
   border-radius: 10px;
+  line-height: 40px;
 }
 
 .about-text h2 {
