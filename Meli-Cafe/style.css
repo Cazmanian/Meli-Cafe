@@ -166,7 +166,7 @@ footer a {
 .menu-section h2 {
   font-size: 2rem;
   font-family: 'Montserrat', Cambria, sans-serif;
-  color: #054edb;
+  color: #5a3c0a;
   margin-bottom: 15px;
   border-bottom: 2px solid #c47f1f;
   padding-bottom: 5px;
@@ -192,6 +192,17 @@ footer a {
 .menu-category ul li {
   margin-bottom: 8px;
   font-size: 1.1rem;
+}
+.menu-category li {
+  font-weight: bold;
+}
+.menu-category p {
+  font-weight: 100;
+  font-size: 1rem;
+}
+
+.description {
+  font-style: italic;
 }
 
 /* Flavors & Toppings section */
@@ -308,4 +319,9 @@ footer a {
   display: block;
   margin: 0;
   padding: 0;
+}
+
+.insta {
+  position: relative;
+
 }
