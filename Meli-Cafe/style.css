@@ -325,3 +325,123 @@ footer a {
   position: relative;
 
 }
+
+/* ---------- FOOTER ---------- */
+.site-footer {
+  background-color: #fceaa7;
+  border-top: 3px solid #e3b23c;
+  padding: 40px 20px 25px 20px;
+  margin-top: 60px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: #4a2c00;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Honeycomb border */
+.honeycomb-border {
+  width: 100%;
+  height: 50px;
+  background-image: url('images/honeycomb-border.png'); /* You will upload this */
+  background-repeat: repeat-x;
+  background-size: contain;
+  position: absolute;
+  top: -25px;
+  left: 0;
+}
+
+/* Footer layout */
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 10px;
+}
+
+.footer-link {
+  font-size: 20px;
+  color: #4a2c00;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: #e3b23c;
+}
+
+/* Instagram icon */
+.footer-icon img {
+  width: 36px;
+  height: 36px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+  transition: transform 0.2s ease;
+}
+
+.footer-icon img:hover {
+  transform: scale(1.1);
+}
+
+/* Bee icons */
+.bee-icon {
+  width: 40px;
+  height: auto;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+  transition: transform 0.2s ease;
+}
+
+.bee-icon:hover {
+  transform: scale(1.15);
+}
+
+/* Footer note */
+.footer-note {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-top: 10px;
+}
+
+/* Mobile version */
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .bee-icon {
+    display: none; /* removes bees on small screens for cleaner layout */
+  }
+  .honeycomb-border {
+    height: 40px;
+    top: -20px;
+  }
+}
+
+/*----- Bee Icons ----*/
+.bee {
+  position: absolute;
+  left: 2%;
+  font-size: 2.2rem;
+  animation: float 6s ease-in-out infinite, drift 12s linear infinite;
+  pointer-events: none; /* bees won't block clicking */
+  opacity: 0.8;
+}
+
+.bee1 { top: 20%; left: 5%; }
+.bee2 { top: 60%; left: 85%; }
+.bee3 { top: 40%; left: 30%; }
+
+/* Up-and-down floating */
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Slow drifting across the screen */
+@keyframes drift {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(30px); }
+  100% { transform: translateX(0); }
+}
