@@ -3,6 +3,8 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+
 .montserrat-font> {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
@@ -22,6 +24,7 @@ body {
   max-width: 1000px;
   margin: 0 auto;
   padding: 30px;
+  padding-bottom: 60px;
   background: rgba(238, 212, 98, 0.95); /* soft opaque honey-yellow */
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.15);
@@ -47,7 +50,7 @@ body {
   height: 70px;
   font-size: 20px;
   gap: 23px;
-  background: #fff8dc;
+  background: #fceaa7;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -79,7 +82,7 @@ body {
 }
 
 .nav-links a:hover {
-  color: #1f2ac4;
+  color: #e3b23c;
 }
 /* Navbar scroll animation */
 .navbar {
@@ -97,17 +100,6 @@ body {
   transition: height 0.3s ease;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #fff8dc;
-  margin-top: 40px;
-}
-footer a {
-  color: #5a3c0a;
-  font-weight: bold;
-}
 
 /* --- About Page alternating sections --- */
 .about-section {
@@ -145,29 +137,37 @@ footer a {
 /* --- Menu Page --- */
 .menu_title {
   text-align: center;
-  margin-bottom: 30px;
-  font-size: 3.5rem;
-  color: #5a3c0a;
+  margin-bottom: 10px;
+  font-size: 3rem;
+  color: #6b490d;
+  text-shadow: 1px 1px 0 #000000;
   font-family: 'Mrs Saint Delafield', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, cursive;
 }
 
 .menu-section {
   flex: 1;
   min-width: 300px;
+  background: rgba(238, 212, 98, 0.95);
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
 }
 
 .menu {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
   flex-wrap: wrap;
   gap: 40px;
 }
 
 .menu-section h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   font-family: 'Montserrat', Cambria, sans-serif;
   color: #5a3c0a;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   border-bottom: 2px solid #c47f1f;
   padding-bottom: 5px;
 }
@@ -176,12 +176,20 @@ footer a {
   margin: 20px 0;
   font-family: "Montserrat" Arial, sans-serif;
   letter-spacing: 1px;
+  margin-bottom: 15px;
+  padding-bottom: 20px;
 }
 
 .menu-category h3 {
   font-size: 1.4rem;
   color: #5a3c0a;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+}
+
+.menu-category h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  margin: 6px 0;
 }
 
 .menu-category ul {
@@ -211,14 +219,14 @@ footer a {
   display: flex;
   justify-content: space-between;
   margin-top: 40px;
-  padding: 20px;
+  padding: 25px;
   border-top: 2px dashed #c47f1f;
   gap: 20px;
 }
 
 .extras-box {
   flex: 1;
-  background: rgba(245, 180, 2, 0.301);
+  background: rgba(238, 212, 98, 0.95);
   padding: 15px;
   border-radius: 8px;
 }
@@ -244,6 +252,10 @@ footer a {
   .menu-columns {
     flex-direction: column;
     align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    width: 100%;
   }
 
   .about-section img {
@@ -260,6 +272,15 @@ footer a {
     width: 100%;
     max-width: 400px;
   }
+}
+
+.menu-section, .extras {
+  animation: fadeSlide 0.6s ease;
+}
+
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacitiy: 1; transform:  translateY(0);}
 }
 
 /* ------------- Calendar page -----------------*/
@@ -343,7 +364,7 @@ footer a {
 .honeycomb-border {
   width: 100%;
   height: 50px;
-  background-image: url('images/honeycomb-border.png'); /* You will upload this */
+  background-image: url('images/honeycomb-border.png'); 
   background-repeat: repeat-x;
   background-size: contain;
   position: absolute;
@@ -444,4 +465,167 @@ footer a {
   0%   { transform: translateX(0); }
   50%  { transform: translateX(30px); }
   100% { transform: translateX(0); }
+}
+
+.honeycomb-border {
+  width: 100%;
+  height: 40px;
+  background-image: url('');
+  background-size: contain;
+  background-repeat: repeat-x;
+  margin-bottom: 30px;
+}
+
+
+/* BUTTON AREA */
+.menu-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+
+.menu-buttons button, .menu-buttons a {
+  padding: 15px 25px;
+  border-radius: 12px;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(135deg, #f4d06f, #f2a007);
+  color: #4c3300;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 4px 0 #b97a00;
+  transition: 0.2s ease;
+}
+
+
+.menu-buttons button:hover, .menu-buttons a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 0 #b97a00;
+}
+
+/* BEE ICON ADDED TO BUTTONS */
+.button-with-bee {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+
+.button-with-bee img {
+  width: 28px;
+  height: 28px;
+}
+
+/* CONTACT PAGE STYLES */
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 20px 0;
+}
+
+.page-header h1 {
+  font-family: "Mrs Saint Delafield", cursive;
+  font-size: 4rem; 
+  color: #5a4200;
+  margin: 0;
+}
+
+.contact-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: #ffe79d;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  backdrop-filter: blur(4px);
+}
+
+
+.contact-container h1 {
+  text-align: center;
+  font-family: 'Mrs Saint Delafield', cursive;
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #6a4a00;
+}
+
+
+.contact-container p.subtitle {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #5a4500;
+}
+
+
+form.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.contact-form label {
+  font-weight: 600;
+  color: #6a4a00;
+}
+
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e7c76f;
+  border-radius: 12px;
+  background: rgba(255, 249, 223, 0.9);
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  transition: 0.2s ease;
+}
+
+
+.contact-form input:focus, .contact-form textarea:focus {
+  border-color: #d1a842;
+  outline: none;
+  box-shadow: 0 0 6px rgba(209,168,66,0.4);
+}
+
+
+.contact-form textarea {
+  min-height: 130px;
+}
+
+.contact-form button[type="submit"] {
+  background-color: #f4c542;
+  color: #5a4200;
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem; 
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+
+  border-radius: 30px;
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15)
+}
+
+.contact-form button[type="submit"]:hover {
+    background-color: #ffdd5e;   /* lighter honey */
+    box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+    transform: translateY(-2px);
+}
+
+.contact-form button[type="submit"]:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
 }
