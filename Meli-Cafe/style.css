@@ -135,86 +135,69 @@ body {
 }
 
 /* --- Menu Page --- */
-.menu_title {
-  text-align: center;
-  margin-bottom: 10px;
-  font-size: 3rem;
-  color: #6b490d;
-  text-shadow: 1px 1px 0 #000000;
-  font-family: 'Mrs Saint Delafield', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, cursive;
-}
-
-.menu-section {
-  flex: 1;
-  min-width: 300px;
-  background: rgba(238, 212, 98, 0.95);
-  padding: 25px;
-  border-radius: 18px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-  margin-bottom: 30px;
-}
-
-.menu {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 40px;
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  margin-top: 60px;
 }
 
 .menu-section h2 {
-  font-size: 3rem;
-  font-family: 'Montserrat', Cambria, sans-serif;
-  color: #5a3c0a;
-  margin-bottom: 10px;
-  border-bottom: 2px solid #c47f1f;
-  padding-bottom: 5px;
+font-family: 'Montserrat', sans-serif;
+font-size: 1.6rem;
+font-weight: 800;
+letter-spacing: 2px;
+text-transform: uppercase;
+color: #3a2408;
+margin: 40px 0 15px;
+position: relative;
 }
 
-.menu-category {
-  margin: 20px 0;
-  font-family: "Montserrat" Arial, sans-serif;
-  letter-spacing: 1px;
-  margin-bottom: 15px;
-  padding-bottom: 20px;
+.menu-section h2::after {
+content: "";
+display: block;
+width: 60px;
+height: 3px;
+background: #3a2408;
+margin-top: 8px;
 }
 
-.menu-category h3 {
-  font-size: 1.4rem;
-  color: #5a3c0a;
-  margin-bottom: 8px;
+.menu-list {
+list-style: none;
+padding: 0;
+margin: 0;
 }
 
-.menu-category h4 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  margin: 6px 0;
+
+.menu-list li {
+display: grid;
+grid-template-columns: auto 1fr auto;
+align-items: center;
+gap: 10px;
+margin-bottom: 12px;
+font-family: 'Montserrat', sans-serif;
+font-size: 1.05rem;
 }
 
-.menu-category ul {
-  list-style: none;
-  padding-left: 15px;
+
+/* Item name */
+.menu-list li span:first-child {
+white-space: nowrap;
 }
 
-.menu-category ul li {
-  margin-bottom: 8px;
-  font-size: 1.1rem;
+
+/* Dotted leader */
+.menu-list li::after {
+content: "";
+border-bottom: 1px dotted #5a3c0a;
+transform: translateY(-2px);
 }
-.menu-section:nth-of-type(2) .menu-category li {
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-.menu-section:nth-of-type(2) .menu-category li p {
-  font-weight: 100;
-  font-size: 1rem;
-  margin-top: 4px;
-  margin-bottom: 18px;
-  margin-left: 1.0rem;
-  line-height: 1.45;
-}
-.menu-category h4 {
-  margin-bottom: 8px;
+
+
+/* Price */
+.menu-list li span:last-child {
+white-space: nowrap;
+font-weight: 600;
 }
 
 .description {
@@ -222,70 +205,19 @@ body {
   margin-bottom: 12px;
 }
 
-/* Flavors & Toppings section */
-.extras {
-  font-family:'Montserrat', Arial, Helvetica, sans-serif;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 40px;
-  padding: 25px;
-  border-top: 2px dashed #c47f1f;
-  gap: 20px;
-}
-
-.extras-box {
-  flex: 1;
-  background: rgba(238, 212, 98, 0.95);
-  padding: 15px;
-  border-radius: 8px;
-}
-
-.extras-box h3 {
-  color: #5a3c0a;
-  margin-bottom: 10px;
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-}
-
-.extras-box ul {
-  list-style: none;
-  padding-left: 10px;
-}
-
-.extras-box ul li {
-  margin-bottom: 6px;
-  font-size: 1rem;
-}
 
 
 @media (max-width: 768px) {
-  .menu-columns {
-    flex-direction: column;
-    align-items: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  .menu-grid {
+    grid-template-columns: 1fr;
     gap: 40px;
-    width: 100%;
+  }
   }
 
   .about-section img {
     width: 100%;
     max-width: 300px;
   }
-    /* Stack flavors/toppings */
-  .extras {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .extras-box {
-    width: 100%;
-    max-width: 400px;
-  }
-}
-
-.menu-section, .extras {
-  animation: fadeSlide 0.6s ease;
-}
 
 @keyframes fadeSlide {
   from { opacity: 0; transform: translateY(20px); }
