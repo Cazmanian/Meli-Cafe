@@ -200,11 +200,106 @@ white-space: nowrap;
 font-weight: 600;
 }
 
+.menu_title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.2rem;
+  letter-spacing: 6px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.menu_title::after {
+  display: block;
+  font-size: 1.5rem;
+  margin-top: 8px;
+}
+
 .description {
   font-style: italic;
   margin-bottom: 12px;
 }
 
+.page-container {
+position: relative;
+overflow: hidden;
+}
+
+.menu-title-image {
+  position: absolute;
+  top: 5px;
+  right: 40px;
+  width: 200px;
+  opacity: 0.80;
+  pointer-events: none;
+}
+
+
+/* decorative image */
+.menu-decor {
+position: absolute;
+bottom: -40px;
+left: -30px;
+width: 240px;
+opacity: 0.80;
+pointer-events: none;
+}
+
+/* Taste of Greece descriptions */
+.menu-list.described li {
+  grid-template-columns: auto 1fr auto;
+  row-gap: 4px;
+}
+
+.menu-list.described li::after {
+  grid-column: 2 / 3;
+}
+
+.menu-list.described .item-desc {
+  grid-column: 1 / -1;
+  margin-left: 1.5rem;
+  margin-top: 4px;
+  font-size: 0.95rem;
+  font-style: italic;
+  line-height: 1.4;
+  color: #5a3c0a;
+}
+
+.taste-greece h2 {
+  margin-top: 60px;
+  letter-spacing: 3px;
+}
+
+/* Extras blocks under sections */
+.extras-block {
+  margin-top: 45px;           /* distance from main items */
+  padding-top: 20px;
+  border-top: 1px dashed #c47f1f;
+}
+
+/* Extras headings */
+.extras-title {
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  color: #3a2408;
+}
+
+/* Smaller list styling */
+.menu-list.compact li {
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+  font-weight: 300;
+}
+
+.disclaimer {
+text-align: center;
+margin-top: 60px;
+font-family: 'Montserrat', sans-serif;
+font-size: 1.1rem;
+color: #3a2408;
+font-weight: 300;
+}
 
 
 @media (max-width: 768px) {
@@ -212,7 +307,14 @@ font-weight: 600;
     grid-template-columns: 1fr;
     gap: 40px;
   }
+  .menu-section h2 {
+    text-align: center;
+}
+  .menu-section h2::after {
+    margin-left: auto;
+    margin-right: auto;
   }
+}
 
   .about-section img {
     width: 100%;
